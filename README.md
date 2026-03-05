@@ -47,21 +47,37 @@ teams across all leagues, and ranks the **top-2 teams per league** by
 
 ## Quick start
 
+### Option A – single self-contained file (recommended)
+
+```bash
+pip install pandas tabulate requests beautifulsoup4 lxml
+python all_master_league.py
+```
+
+`all_master_league.py` is the **complete, standalone Python program**.  It
+contains every line of code needed – scraping helpers, fallback data, data
+processing, and display logic – in a single file with no project-local imports.
+
+### Option B – modular pipeline
+
 ```bash
 # Install dependencies
 pip install -r requirements.txt
 
-# Run and view ALL results (recommended)
+# Run and view ALL results
 python run_and_view.py
 
-# Run the core scraper only
+# Run the core scraper/data module only
 python flashscore_scraper.py
-
-# Run tests
-python -m pytest test_run_and_view.py test_flashscore_scraper.py -v
 ```
 
-### What `run_and_view.py` displays
+### Run tests
+
+```bash
+python -m pytest test_all_master_league.py test_run_and_view.py test_flashscore_scraper.py -v
+```
+
+### What each script displays
 
 | Section | Description |
 |---------|-------------|
