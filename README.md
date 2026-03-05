@@ -51,12 +51,25 @@ teams across all leagues, and ranks the **top-2 teams per league** by
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the scraper
+# Run and view ALL results (recommended)
+python run_and_view.py
+
+# Run the core scraper only
 python flashscore_scraper.py
 
 # Run tests
-python -m pytest test_flashscore_scraper.py -v
+python -m pytest test_run_and_view.py test_flashscore_scraper.py -v
 ```
+
+### What `run_and_view.py` displays
+
+| Section | Description |
+|---------|-------------|
+| Full master table | Every team in every league sorted by Win% |
+| Per-league standings | One block per league with full standings |
+| Top-2 per league | Highest two Win% teams per league |
+| Overall top-10 | Cross-league leaderboard with rank numbers |
+| Summary statistics | League/team counts, avg/max/min Win%, best & worst team |
 
 ---
 
