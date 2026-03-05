@@ -1,0 +1,19 @@
+# Python cache / bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# pytest cache
+.pytest_cache/
+
+# Generated CSV outputs
+master_table.csv
+top2_per_league.csv
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS files
+.DS_Store
